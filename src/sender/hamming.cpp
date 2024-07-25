@@ -1,3 +1,12 @@
+/*---------------------------------------------------------------------------
+Copyright (C), 2024-2025, bl33h, Mendezg1
+@author Sara Echeverria, Ricardo Mendez
+FileName: hamming.cpp
+@version: I
+Creation: 23/07/2024
+Last modification: 25/07/2024
+------------------------------------------------------------------------------*/
+
 #include <iostream>
 #include <string>
 
