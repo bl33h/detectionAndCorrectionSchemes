@@ -26,11 +26,12 @@ def CRC32(data, poly):
     
 
 if __name__ == "__main__"   :
-    received = "1101001000000000000000000000000010110"
+    received = "0101100010000000000000000000000010001"
     poly = "111100000000000000000000000000001"
+    msg = received[:len(received) - len(poly) +1]
     flag, result = CRC32(received, poly)
     if not flag:
         print(f"Se encontró un error. La cadena resultante es: {result}")
     else: 
-        print(f"Mensaje recibido correctamente. Cadena resultante: {result}")
+        print(f"Mensaje recibido correctamente. Mensaje: {msg}")
     

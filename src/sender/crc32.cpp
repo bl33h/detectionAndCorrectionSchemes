@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include "crc32.h"
 
 int mostSignificantBitPosition(const std::string& bitString) {
     for (int i = 0; i < bitString.size(); ++i) {
@@ -31,18 +32,3 @@ std::string crc32(const std::string& data, const std::string& polynomial, const 
     return result.substr(data.size() - (polynomial.size() - 1));
 }
 
-int main() {
-    std::string original_data = "11010"; 
-    std::string polynomial = "111100000000000000000000000000001"; 
-    int initial_pos = original_data.size() - 1;
-    std::string data = original_data;
-    data.append(polynomial.size() - 1, '0');
-    
-
-    std::string checksum = crc32(data, polynomial, initial_pos);
-    std::string crc = original_data + checksum;
-    std::cout << "CRC32: " << crc << std::endl;
-
-    // Result = CRC32: 1101001000000000000000000000000010110
-    return 0;
-}
