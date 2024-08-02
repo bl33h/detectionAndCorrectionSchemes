@@ -36,18 +36,30 @@ def receive_data():
 
             # check if the checksum is correct
             if flag:
+<<<<<<< HEAD
                 print("✓checksum is correct.")
+=======
+                print("Checksum is correct.")
+>>>>>>> eafec9cd779647d6d18d09a118540c9b8b15dbc7
                 relevant_data = data_str[:len(data_str) - len(POLY)+1]
 
                 chars = ''.join(chr(int(relevant_data[i:i+8], 2)) for i in range(0, len(relevant_data), 8))
                 print("• original message:", chars)
                 break
             else:
+<<<<<<< HEAD
                 print(f"!checksum is incorrect. chain: {result}")
+=======
+                print(f"Checksum is incorrect. Chain: {result}")
+>>>>>>> eafec9cd779647d6d18d09a118540c9b8b15dbc7
                 break
         else:
             print("!invalid scheme entered.")
         
+<<<<<<< HEAD
+=======
+        # Close the connection
+>>>>>>> eafec9cd779647d6d18d09a118540c9b8b15dbc7
         conn.close()
 
 receive_data()
